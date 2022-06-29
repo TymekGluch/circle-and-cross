@@ -24,15 +24,35 @@
                 </button>
             </header>
 
+            <aside class="form-section form-section--hidden">
+                <form class="form-section__form" id="players">
+                    <div class="form-section__container">
+                       <div class="form-section__input-container">
+                            <label for="username">player - O :</label>
+                            
+                            <input class="form-section__input" type="text" >
+                       </div>
+
+                       <div class="form-section__input-container">
+                            <label for="username">player - X :</label>
+
+                            <input class="form-section__input" type="text">
+                       </div>
+                    </div>
+
+                    <button type="submit" class="form-section__submit-button">submit</button>
+                </form>
+            </aside>
+
             <section class="game-section">
                 <div class="game-board" id="board"> 
-                    <button data-id="0.0" class="game-board__field game-board__field--cross" disabled aria-label="field - 1.1"></button>  <!-- field - row.column -->
+                    <button data-id="0.0" class="game-board__field game-board__field--cross game-board__field--win" disabled aria-label="field - 1.1"></button>  <!-- field - row.column -->
                     <button data-id="0.1" class="game-board__field game-board__field--circle" disabled aria-label="field - 1.2"></button>
                     <button data-id="0.2" class="game-board__field game-board__field--cross" disabled aria-label="field - 1.3"></button>
-                    <button data-id="1.0" class="game-board__field game-board__field--cross" disabled aria-label="field - 2.1"></button>
+                    <button data-id="1.0" class="game-board__field game-board__field--cross game-board__field--win" disabled aria-label="field - 2.1"></button>
                     <button data-id="1.1" class="game-board__field game-board__field--circle" disabled aria-label="field - 2.2"></button>
                     <button data-id="1.2" class="game-board__field game-board__field--circle" disabled aria-label="field - 2.3"></button>
-                    <button data-id="2.0" class="game-board__field game-board__field--circle" disabled aria-label="field - 3.1"></button>
+                    <button data-id="2.0" class="game-board__field game-board__field--cross game-board__field--win" disabled aria-label="field - 3.1"></button>
                     <button data-id="2.1" class="game-board__field game-board__field--cross" disabled aria-label="field - 3.2"></button>
                     <button data-id="2.2" class="game-board__field game-board__field--circle" disabled aria-label="field - 3.3"></button>    
                 </div>

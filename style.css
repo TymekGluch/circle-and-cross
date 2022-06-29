@@ -63,10 +63,9 @@ body {
     left: 50%;
     transform: translate(-50%, 50%);
     cursor: pointer;    
+    z-index: 100;
 }
 .main-header__start-button:hover {
-    transform: translate(-50%, 50%) rotate(720deg);
-    transition: transform 350ms;
     box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
@@ -106,6 +105,9 @@ body {
     border-radius: 5%;
     margin: 3px;
     cursor: pointer;
+}
+.game-board__field--win {
+    background-color: var(--accent-color);
 }
 .game-board__field--circle,
 .game-board__field--cross {
@@ -165,6 +167,57 @@ body {
     margin-left: 5px; 
     color: var(--primary-text-color);
     font-size: 16px;
+}
+
+.form-section {
+    background-color: var(--light-primary-color);
+    height: 25vh;
+    width: 100vw;
+    transition: transform 250ms;
+    transform-origin: top center;
+}
+.form-section__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--primary-text-color);
+    height: 100%;
+    width: 100%;
+}
+.form-section--hidden {
+    transform: scaleY(0);
+    height: 0;
+    transition: none;
+}
+.form-section__submit-button {
+    border: none;
+    background-color: var(--accent-color);
+    width: 100vw;
+    height: 15%;
+    font-weight: 700;
+    color: var(--text-icons-color);
+}
+.form-section__submit-button:hover {
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);
+}
+.form-section__container {
+    height: 75%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+}
+.form-section__input-container {
+    margin-top: 7%;
+    font-weight: 900;
+}
+.form-section__input {
+    border-radius: 15px;
+    height: 32px;
+    padding: 4px 16px;
 }
 
 @media (prefers-reduced-motion) {
