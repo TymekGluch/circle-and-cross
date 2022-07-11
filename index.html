@@ -16,27 +16,29 @@
                 </h1>
 
                 <p class="main-header__text">
-                    player: <span>Włalartosz</span>
+                    player: <span id="playername" >...</span>
                 </p>
 
-                <button id="start-button" class="main-header__start-button" aria-label="start game">
+                <button id="start-button" disabled class="main-header__start-button" aria-label="start game">
                     start
                 </button>
             </header>
 
-            <aside class="form-section form-section--hidden">
+            <aside id="formHidden" class="form-section">
                 <form class="form-section__form" id="players">
                     <div class="form-section__container">
                        <div class="form-section__input-container">
-                            <label for="username">player - O :</label>
+                            <label for="username-circle">player - O :</label>
                             
-                            <input class="form-section__input" type="text" >
+                            <input id="username-circle" class="form-section__input" type="text" >
+                            <small></small>
                        </div>
 
                        <div class="form-section__input-container">
-                            <label for="username">player - X :</label>
+                            <label for="username-cross">player - X :</label>
 
-                            <input class="form-section__input" type="text">
+                            <input id="username-cross" class="form-section__input" type="text">
+                            <small></small>
                        </div>
                     </div>
 
