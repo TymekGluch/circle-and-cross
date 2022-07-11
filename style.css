@@ -68,6 +68,10 @@ body {
 .main-header__start-button:hover {
     box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.3);
 }
+.main-header__start-button:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+ }
 
 .game-section {
     display: flex;
@@ -213,6 +217,14 @@ body {
 .form-section__input-container {
     margin-top: 7%;
     font-weight: 900;
+}
+.form-section__input-container small {
+    visibility: hidden;
+    position: absolute;
+}
+.form-section__input-container.error small {
+    visibility: visible;
+    color: var(--primary-text-color);
 }
 .form-section__input {
     border-radius: 15px;
